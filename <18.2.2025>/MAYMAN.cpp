@@ -33,25 +33,25 @@ void read()
 		cin>>a[i];
 	}
 }
-int check(int n) {
-	vi a;
-	while(n != 0) {
-		a.pb(n % 10);
-		n /= 10;
-	}
-	int dem = 0;
-	for(int i = 0; i < a.size(); i++) {
-		if(a[i] == 9) {
-			dem++;
-		}
-	}
-	return dem;
-}
+// int check(int n) {
+// 	vi a;
+// 	while(n != 0) {
+// 		a.pb(n % 10);
+// 		n /= 10;
+// 	}
+// 	int dem = 0;
+// 	for(int i = 0; i < a.size(); i++) {
+// 		if(a[i] == 9) {
+// 			dem++;
+// 		}
+// 	}
+// 	return dem;
+// }
 void solve()
 {
 	int cnt = 0;
 	for(int i = 1; i <= n; i++) {
-		if(check(a[i]) > 0) {
+		if(a[i] % 10 == 9) {
 			cnt++;
 		}
 	}
